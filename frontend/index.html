@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Semantic Recipe Finder</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Semantic Food Recipe Finder</h1>
+      <p>Query the knowledge graph for recipes that match your dietary needs.</p>
+    </header>
+    <main class="app-main">
+      <section class="search-panel">
+        <form id="search-form" class="search-form">
+          <div class="form-group">
+            <label for="ingredient">Ingredient contains</label>
+            <input id="ingredient" name="ingredient" placeholder="e.g. lentils" />
+          </div>
+          <div class="form-group">
+            <label for="cuisine">Cuisine</label>
+            <select id="cuisine" name="cuisine">
+              <option value="">Any</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="diet">Diet</label>
+            <select id="diet" name="diet">
+              <option value="">Any</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="max-time">Max total time (minutes)</label>
+            <input id="max-time" name="maxTime" type="number" min="0" step="5" placeholder="e.g. 45" />
+          </div>
+          <div class="form-actions">
+            <button type="submit">Search</button>
+            <button type="button" id="reset-btn" class="secondary">Reset</button>
+          </div>
+        </form>
+      </section>
+      <section class="results-panel">
+        <div id="loading" class="status hidden">Loading recipes…</div>
+        <div id="error" class="status error hidden"></div>
+        <ul id="results" class="results-list"></ul>
+      </section>
+      <aside class="detail-panel" id="detail-panel">
+        <h2 id="detail-title">Select a recipe to see the details</h2>
+        <div id="detail-body" class="detail-body hidden">
+          <div class="detail-meta">
+            <div><strong>Total time:</strong> <span id="detail-time"></span></div>
+            <div><strong>Rating:</strong> <span id="detail-rating"></span></div>
+            <div><strong>Cuisines:</strong> <span id="detail-cuisines"></span></div>
+            <div><strong>Diets:</strong> <span id="detail-diets"></span></div>
+            <div><strong>Source:</strong> <a id="detail-url" target="_blank" rel="noopener noreferrer">View recipe</a></div>
+          </div>
+          <div class="detail-section">
+            <h3>Ingredients</h3>
+            <ul id="detail-ingredients"></ul>
+          </div>
+          <div class="detail-section">
+            <h3>Directions</h3>
+            <ol id="detail-directions"></ol>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <footer class="app-footer">
+      <p>© 2025 Semantic Recipe Finder</p>
+    </footer>
+    <script src="/assets/app.js" type="module"></script>
+  </body>
+</html>

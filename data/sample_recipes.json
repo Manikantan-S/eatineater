@@ -1,0 +1,106 @@
+[
+  {
+    "recipe_name": "Smoky Lentil Soup",
+    "prep_time": 15,
+    "cook_time": 35,
+    "total_time": 50,
+    "servings": 4,
+    "ingredients": [
+      "brown lentils",
+      "smoked paprika",
+      "vegetable broth",
+      "carrots",
+      "celery",
+      "onion",
+      "garlic",
+      "olive oil"
+    ],
+    "directions": [
+      "Sauté vegetables in olive oil until softened.",
+      "Add spices and lentils, then pour in broth.",
+      "Simmer until lentils are tender and season to taste."
+    ],
+    "rating": 4.8,
+    "url": "https://example.com/smoky-lentil-soup",
+    "cuisine_path": "European > Mediterranean",
+    "nutrition": {
+      "calories": 320,
+      "protein": 18,
+      "fat": 8,
+      "carbohydrates": 42
+    },
+    "timing": {
+      "active": 20,
+      "passive": 30
+    }
+  },
+  {
+    "recipe_name": "Creamy Mushroom Pasta",
+    "prep_time": 10,
+    "cook_time": 20,
+    "total_time": 30,
+    "servings": 2,
+    "ingredients": [
+      "spaghetti",
+      "cremini mushrooms",
+      "parmesan cheese",
+      "heavy cream",
+      "garlic",
+      "butter",
+      "parsley"
+    ],
+    "directions": [
+      "Cook pasta until al dente.",
+      "Sauté mushrooms in butter, add garlic and cream.",
+      "Combine with pasta and top with parmesan and parsley."
+    ],
+    "rating": 4.5,
+    "url": "https://example.com/creamy-mushroom-pasta",
+    "cuisine_path": "European > Italian",
+    "nutrition": {
+      "calories": 540,
+      "protein": 16,
+      "fat": 28,
+      "carbohydrates": 60
+    },
+    "timing": {
+      "active": 15,
+      "passive": 15
+    }
+  },
+  {
+    "recipe_name": "Spiced Chickpea Curry",
+    "prep_time": 20,
+    "cook_time": 25,
+    "total_time": 45,
+    "servings": 4,
+    "ingredients": [
+      "chickpeas",
+      "coconut milk",
+      "tomato puree",
+      "garam masala",
+      "turmeric",
+      "ginger",
+      "garlic",
+      "spinach"
+    ],
+    "directions": [
+      "Toast spices in oil, then add aromatics.",
+      "Stir in tomato puree and coconut milk, simmer.",
+      "Add chickpeas and spinach until heated through."
+    ],
+    "rating": 4.9,
+    "url": "https://example.com/spiced-chickpea-curry",
+    "cuisine_path": "Asian > Indian",
+    "nutrition": {
+      "calories": 410,
+      "protein": 14,
+      "fat": 18,
+      "carbohydrates": 52
+    },
+    "timing": {
+      "active": 25,
+      "passive": 20
+    }
+  }
+]

@@ -1,0 +1,220 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rec: <http://example.org/recipes#> .
+@prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rec:avoidsIngredientCategory a owl:ObjectProperty .
+
+rec:hasCookTime a owl:DatatypeProperty .
+
+rec:hasCuisine a owl:ObjectProperty .
+
+rec:hasDiet a owl:ObjectProperty .
+
+rec:hasIngredient a owl:ObjectProperty .
+
+rec:hasPrepTime a owl:DatatypeProperty .
+
+rec:hasRating a owl:DatatypeProperty .
+
+rec:hasServings a owl:DatatypeProperty .
+
+rec:hasTotalTime a owl:DatatypeProperty .
+
+rec:recipe-creamy-mushroom-pasta a rec:Recipe ;
+    rdfs:label "Creamy Mushroom Pasta" ;
+    rec:avoidsIngredientCategory rec:AnimalProduct,
+        rec:GlutenIngredient ;
+    rec:hasCookTime 20 ;
+    rec:hasCuisine rec:cuisine-italian ;
+    rec:hasDiet rec:Vegetarian ;
+    rec:hasIngredient rec:ingredient-butter,
+        rec:ingredient-cremini-mushrooms,
+        rec:ingredient-garlic,
+        rec:ingredient-heavy-cream,
+        rec:ingredient-parmesan-cheese,
+        rec:ingredient-parsley,
+        rec:ingredient-spaghetti ;
+    rec:hasPrepTime 10 ;
+    rec:hasRating "4.5"^^xsd:float ;
+    rec:hasServings 2 ;
+    rec:hasTotalTime 30 ;
+    schema1:step [ a schema1:HowToStep ;
+            rdfs:label "Sauté mushrooms in butter, add garlic and cream." ;
+            schema1:position 2 ],
+        [ a schema1:HowToStep ;
+            rdfs:label "Combine with pasta and top with parmesan and parsley." ;
+            schema1:position 3 ],
+        [ a schema1:HowToStep ;
+            rdfs:label "Cook pasta until al dente." ;
+            schema1:position 1 ] ;
+    schema1:url "https://example.com/creamy-mushroom-pasta" .
+
+rec:recipe-smoky-lentil-soup a rec:Recipe ;
+    rdfs:label "Smoky Lentil Soup" ;
+    rec:hasCookTime 35 ;
+    rec:hasCuisine rec:cuisine-mediterranean ;
+    rec:hasDiet rec:GlutenFree,
+        rec:Vegan,
+        rec:Vegetarian ;
+    rec:hasIngredient rec:ingredient-brown-lentils,
+        rec:ingredient-carrots,
+        rec:ingredient-celery,
+        rec:ingredient-garlic,
+        rec:ingredient-olive-oil,
+        rec:ingredient-onion,
+        rec:ingredient-smoked-paprika,
+        rec:ingredient-vegetable-broth ;
+    rec:hasPrepTime 15 ;
+    rec:hasRating "4.8"^^xsd:float ;
+    rec:hasServings 4 ;
+    rec:hasTotalTime 50 ;
+    schema1:step [ a schema1:HowToStep ;
+            rdfs:label "Sauté vegetables in olive oil until softened." ;
+            schema1:position 1 ],
+        [ a schema1:HowToStep ;
+            rdfs:label "Add spices and lentils, then pour in broth." ;
+            schema1:position 2 ],
+        [ a schema1:HowToStep ;
+            rdfs:label "Simmer until lentils are tender and season to taste." ;
+            schema1:position 3 ] ;
+    schema1:url "https://example.com/smoky-lentil-soup" .
+
+rec:recipe-spiced-chickpea-curry a rec:Recipe ;
+    rdfs:label "Spiced Chickpea Curry" ;
+    rec:avoidsIngredientCategory rec:AnimalProduct ;
+    rec:hasCookTime 25 ;
+    rec:hasCuisine rec:cuisine-indian ;
+    rec:hasDiet rec:GlutenFree,
+        rec:Vegetarian ;
+    rec:hasIngredient rec:ingredient-chickpeas,
+        rec:ingredient-coconut-milk,
+        rec:ingredient-garam-masala,
+        rec:ingredient-garlic,
+        rec:ingredient-ginger,
+        rec:ingredient-spinach,
+        rec:ingredient-tomato-puree,
+        rec:ingredient-turmeric ;
+    rec:hasPrepTime 20 ;
+    rec:hasRating "4.9"^^xsd:float ;
+    rec:hasServings 4 ;
+    rec:hasTotalTime 45 ;
+    schema1:step [ a schema1:HowToStep ;
+            rdfs:label "Toast spices in oil, then add aromatics." ;
+            schema1:position 1 ],
+        [ a schema1:HowToStep ;
+            rdfs:label "Stir in tomato puree and coconut milk, simmer." ;
+            schema1:position 2 ],
+        [ a schema1:HowToStep ;
+            rdfs:label "Add chickpeas and spinach until heated through." ;
+            schema1:position 3 ] ;
+    schema1:url "https://example.com/spiced-chickpea-curry" .
+
+rec:Vegan a rec:DietType ;
+    rdfs:label "Vegan" .
+
+rec:cuisine-asian a rec:Cuisine ;
+    rdfs:label "Asian" .
+
+rec:cuisine-indian a rec:Cuisine ;
+    rdfs:label "Indian" ;
+    rdfs:subClassOf rec:cuisine-asian .
+
+rec:cuisine-italian a rec:Cuisine ;
+    rdfs:label "Italian" ;
+    rdfs:subClassOf rec:cuisine-european .
+
+rec:cuisine-mediterranean a rec:Cuisine ;
+    rdfs:label "Mediterranean" ;
+    rdfs:subClassOf rec:cuisine-european .
+
+rec:ingredient-brown-lentils a rec:Ingredient ;
+    rdfs:label "brown lentils" .
+
+rec:ingredient-butter a rec:AnimalProduct,
+        rec:Ingredient ;
+    rdfs:label "butter" .
+
+rec:ingredient-carrots a rec:Ingredient ;
+    rdfs:label "carrots" .
+
+rec:ingredient-celery a rec:Ingredient ;
+    rdfs:label "celery" .
+
+rec:ingredient-chickpeas a rec:Ingredient ;
+    rdfs:label "chickpeas" .
+
+rec:ingredient-coconut-milk a rec:AnimalProduct,
+        rec:Ingredient ;
+    rdfs:label "coconut milk" .
+
+rec:ingredient-cremini-mushrooms a rec:Ingredient ;
+    rdfs:label "cremini mushrooms" .
+
+rec:ingredient-garam-masala a rec:Ingredient ;
+    rdfs:label "garam masala" .
+
+rec:ingredient-ginger a rec:Ingredient ;
+    rdfs:label "ginger" .
+
+rec:ingredient-heavy-cream a rec:AnimalProduct,
+        rec:Ingredient ;
+    rdfs:label "heavy cream" .
+
+rec:ingredient-olive-oil a rec:Ingredient ;
+    rdfs:label "olive oil" .
+
+rec:ingredient-onion a rec:Ingredient ;
+    rdfs:label "onion" .
+
+rec:ingredient-parmesan-cheese a rec:AnimalProduct,
+        rec:Ingredient ;
+    rdfs:label "parmesan cheese" .
+
+rec:ingredient-parsley a rec:Ingredient ;
+    rdfs:label "parsley" .
+
+rec:ingredient-smoked-paprika a rec:Ingredient ;
+    rdfs:label "smoked paprika" .
+
+rec:ingredient-spaghetti a rec:GlutenIngredient,
+        rec:Ingredient ;
+    rdfs:label "spaghetti" .
+
+rec:ingredient-spinach a rec:Ingredient ;
+    rdfs:label "spinach" .
+
+rec:ingredient-tomato-puree a rec:Ingredient ;
+    rdfs:label "tomato puree" .
+
+rec:ingredient-turmeric a rec:Ingredient ;
+    rdfs:label "turmeric" .
+
+rec:ingredient-vegetable-broth a rec:Ingredient ;
+    rdfs:label "vegetable broth" .
+
+rec:GlutenFree a rec:DietType ;
+    rdfs:label "GlutenFree" .
+
+rec:GlutenIngredient a owl:Class .
+
+rec:cuisine-european a rec:Cuisine ;
+    rdfs:label "European" .
+
+rec:DietType a owl:Class .
+
+rec:Recipe a owl:Class .
+
+rec:Vegetarian a rec:DietType ;
+    rdfs:label "Vegetarian" .
+
+rec:ingredient-garlic a rec:Ingredient ;
+    rdfs:label "garlic" .
+
+rec:Cuisine a owl:Class .
+
+rec:AnimalProduct a owl:Class .
+
+rec:Ingredient a owl:Class .
+
