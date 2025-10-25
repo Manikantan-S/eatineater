@@ -163,14 +163,3 @@ The default ontology defines the following key classes and properties:
 To extend the ontology, edit `scripts/build_graph.py` to add new classes or
 properties, then regenerate the TTL file. The Flask API automatically reflects
 additional data properties because SPARQL queries use labels and groups.
-
-## Sample Data
-
-`data/sample_recipes.json` and `data/recipes_sample.ttl` demonstrate the expected
-input schema and the generated RDF output. Use them to validate your pipeline
-before operating on the full Kaggle dataset.
-
-## License
-
-This project is provided for educational purposes. Verify the licensing terms of
-any external datasets before redistribution.
